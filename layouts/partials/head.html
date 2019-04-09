@@ -16,11 +16,17 @@
 		<link rel="stylesheet" href="{{ .Site.BaseURL }}css/highlight.css">
 
 		{{ if eq .Site.Params.iconFont "font-awesome" }}
-		<link rel="stylesheet" href="{{ .Site.BaseURL }}css/font-awesome.min.css">
+		<!-- Upgraded to FontAwesome 5.013 -->
+		<link rel="stylesheet" href="{{ .Site.BaseURL }}css/fa-solid.min.css">
+		<link rel="stylesheet" href="{{ .Site.BaseURL }}css/fa-brands.min.css">
+		<link rel="stylesheet" href="{{ .Site.BaseURL }}css/fontawesome.min.css">
 		{{ else }}
 		<link rel="stylesheet" href="{{ .Site.BaseURL }}css/monosocialiconsfont.css">
 		{{ end }}
-
+		<!--
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/solid.css" integrity="sha384-Rw5qeepMFvJVEZdSo1nDQD5B6wX0m7c5Z/pLNvjkB14W6Yki1hKbSEQaX9ffUbWe" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/fontawesome.css" integrity="sha384-GVa9GOgVQgOk+TNYXu7S/InPTfSDTtBalSgkgqQ7sCik56N9ztlkoTr2f/T44oKV" crossorigin="anonymous">
+		-->
 		{{ if .Site.Params.enableRSS }}
 		<link href="{{ .Site.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
 		{{ end }}
